@@ -1,3 +1,5 @@
+ # Task 2 Color Detection System with help of pandas and OpenCV
+from turtle import width
 import cv2
 import pandas as pd
 import imutils
@@ -35,7 +37,7 @@ img=cv2.imread(img_path)
 winname="Color Detection System"
 cv2.namedWindow(winname,cv2.WINDOW_NORMAL)
 cv2.setMouseCallback(winname, onmouse_click)
-
+img=imutils.resize(img,width=800,height=800)
 while True:
        
     cv2.imshow(winname,img)
